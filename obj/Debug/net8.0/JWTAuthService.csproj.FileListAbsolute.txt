@@ -1,0 +1,12 @@
+C:\Users\Valentino\Documents\Programacion\JWTAuthService\JWTAuthService\obj\Debug\net8.0\JWTAuthService.csproj.AssemblyReference.cache
+C:\Users\Valentino\Documents\Programacion\JWTAuthService\JWTAuthService\obj\Debug\net8.0\JWTAuthService.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Valentino\Documents\Programacion\JWTAuthService\JWTAuthService\obj\Debug\net8.0\JWTAuthService.AssemblyInfoInputs.cache
+C:\Users\Valentino\Documents\Programacion\JWTAuthService\JWTAuthService\obj\Debug\net8.0\JWTAuthService.AssemblyInfo.cs
+C:\Users\Valentino\Documents\Programacion\JWTAuthService\JWTAuthService\obj\Debug\net8.0\JWTAuthService.csproj.CoreCompileInputs.cache
+C:\Users\Valentino\Documents\Programacion\JWTAuthService\JWTAuthService\bin\Debug\net8.0\JWTAuthService.deps.json
+C:\Users\Valentino\Documents\Programacion\JWTAuthService\JWTAuthService\bin\Debug\net8.0\JWTAuthService.dll
+C:\Users\Valentino\Documents\Programacion\JWTAuthService\JWTAuthService\bin\Debug\net8.0\JWTAuthService.pdb
+C:\Users\Valentino\Documents\Programacion\JWTAuthService\JWTAuthService\obj\Debug\net8.0\JWTAuthService.dll
+C:\Users\Valentino\Documents\Programacion\JWTAuthService\JWTAuthService\obj\Debug\net8.0\refint\JWTAuthService.dll
+C:\Users\Valentino\Documents\Programacion\JWTAuthService\JWTAuthService\obj\Debug\net8.0\JWTAuthService.pdb
+C:\Users\Valentino\Documents\Programacion\JWTAuthService\JWTAuthService\obj\Debug\net8.0\ref\JWTAuthService.dll
