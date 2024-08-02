@@ -13,7 +13,7 @@
 
 ## Example
 ### Controller
-```
+```csharp
 
 [ApiController, Route("auth/refresh-access-token"), Authorize]
 public class RefreshAccessTokenController : ControllerBase
