@@ -10,16 +10,18 @@ public class User : IUser
     {
         Email ??= "";
         Password ??= "";
-        _profile = Class.Profile.CreateNONE();
+        _profile = new Profile();
     }
 
     public User(string email, string password, IProfile profile) : this()
     {
         Email = email;
         Password = password;
+        _profile = profile;
     }
 
     #region Attributes
+    public Guid ID { get; set; }
     public string Email { get; set; }
     public string Password { get; set; }
     public IProfile Profile { get => _profile; set => _profile = value; }

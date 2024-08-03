@@ -4,37 +4,18 @@ namespace JWTAuthService.Entity.Class;
 
 public class Profile : IProfile
 {
-    private enum Profiles
+    public Profile()
     {
-        NONE = 0,
-        ADMIN,
-        BASIC
+        Name ??= "";
     }
-    private Profile(Profiles profile)
+
+    public Profile(string name) : this()
     {
-        ID = (int)profile;
-        Name = profile.ToString();
+        Name = name;
     }
 
     #region Attributes
-    public int ID { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-    public string Name { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-    #endregion
-
-    #region Responsibilities
-    public static Profile CreateAdmin()
-    {
-        return new Profile(Profiles.ADMIN);
-    }
-
-    public static Profile CreateBasic()
-    {
-        return new Profile(Profiles.BASIC);
-    }
-
-    public static Profile CreateNONE()
-    {
-        return new Profile(Profiles.NONE);
-    }
+    public int ID { get; set; }
+    public string Name { get; set; }
     #endregion
 }
