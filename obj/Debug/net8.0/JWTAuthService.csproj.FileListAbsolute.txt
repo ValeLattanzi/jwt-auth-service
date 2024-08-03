@@ -10,3 +10,4 @@ C:\Users\Valentino\Documents\Programacion\JWTAuthService\JWTAuthService\obj\Debu
 C:\Users\Valentino\Documents\Programacion\JWTAuthService\JWTAuthService\obj\Debug\net8.0\refint\JWTAuthService.dll
 C:\Users\Valentino\Documents\Programacion\JWTAuthService\JWTAuthService\obj\Debug\net8.0\JWTAuthService.pdb
 C:\Users\Valentino\Documents\Programacion\JWTAuthService\JWTAuthService\obj\Debug\net8.0\ref\JWTAuthService.dll
+C:\Users\Valentino\Documents\Programacion\JWTAuthService\JWTAuthService\obj\Debug\net8.0\JWTAuthService.sourcelink.json

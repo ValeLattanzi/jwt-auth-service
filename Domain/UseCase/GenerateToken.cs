@@ -16,7 +16,7 @@ public class GenerateToken : IGenerateToken
         _configuration = configuration;
     }
 
-    public string GenerarAccessToken(string email, string accessKey)
+    public string GenerateAccessToken(string email, string accessKey)
     {        // 1.- Generar el AccessToken
         var _tokenHandler = new JwtSecurityTokenHandler();
         // 2.- Obtiene la clave para cifrar el token
@@ -37,7 +37,7 @@ public class GenerateToken : IGenerateToken
         return _accessToken;
     }
 
-    public string GenerarRefreshToken(string email, string refreshKey)
+    public string GenerateRefreshToken(string email, string refreshKey)
     {
         var _tokenHandler = new JwtSecurityTokenHandler();
         var _refreshKey = Encoding.ASCII.GetBytes(_configuration[refreshKey] ?? throw new Exception("Invalid Json Key"));

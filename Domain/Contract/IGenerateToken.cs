@@ -2,6 +2,6 @@
 
 public interface IGenerateToken
 {
-    string GenerarAccessToken(string email, string accessKey);
-    string GenerarRefreshToken(string email, string refreshKey);
+    string GenerateAccessToken(string email, string accessKey);
+    string GenerateRefreshToken(string email, string refreshKey);
 }

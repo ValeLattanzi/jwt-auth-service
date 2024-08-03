@@ -13,6 +13,6 @@ public class RefreshAccessToken : IRefreshAccessToken
 
     public string Refresh(string email, string accessKey)
     {
-        return _generateToken.GenerarAccessToken(email, accessKey);
+        return _generateToken.GenerateAccessToken(email, accessKey);
     }
 }
