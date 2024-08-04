@@ -72,7 +72,7 @@ public class JWTAuthHandler : AuthenticationHandler<AuthenticationSchemeOptions>
 
         var _email = GetEmailFromClaims(jwtRefreshToken, _tokenHandler, _refreshKey);
 
-        var _newAccessToken = _refreshAccessToken.Refresh(_email, ACCESS_KEY);
+        var _newAccessToken = _refreshAccessToken.Refresh(_email, _configuration[ACCESS_KEY]);
 
         if (string.IsNullOrWhiteSpace(_newAccessToken))
             return AuthenticateResult.Fail("Failed to refresh token");

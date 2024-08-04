@@ -1,5 +1,4 @@
 ﻿using JWTAuthService.Domain.Contract;
-using Microsoft.Extensions.Configuration;
 using Microsoft.IdentityModel.Tokens;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
@@ -9,18 +8,15 @@ namespace JWTAuthService.Domain.UseCase;
 
 public class GenerateToken : IGenerateToken
 {
-    private readonly IConfiguration _configuration;
-
-    public GenerateToken(IConfiguration configuration)
+    public GenerateToken()
     {
-        _configuration = configuration;
     }
 
     public string GenerateAccessToken(string email, string accessKey)
     {        // 1.- Generar el AccessToken
         var _tokenHandler = new JwtSecurityTokenHandler();
         // 2.- Obtiene la clave para cifrar el token
-        var _key = Encoding.ASCII.GetBytes(_configuration[accessKey] ?? throw new Exception("Invalid Json Key"));
+        byte[] _key = Encoding.ASCII.GetBytes(accessKey);
         // 3.- Define la configuracion
         var _tokenDescriptor = new SecurityTokenDescriptor
         {
@@ -40,7 +36,7 @@ public class GenerateToken : IGenerateToken
     public string GenerateRefreshToken(string email, string refreshKey)
     {
         var _tokenHandler = new JwtSecurityTokenHandler();
-        var _refreshKey = Encoding.ASCII.GetBytes(_configuration[refreshKey] ?? throw new Exception("Invalid Json Key"));
+        var _refreshKey = Encoding.ASCII.GetBytes(refreshKey);
         var _tokenDescriptor = new SecurityTokenDescriptor
         {
             Subject = new ClaimsIdentity(
