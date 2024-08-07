@@ -1,4 +1,5 @@
 ﻿using JWTAuthService.Domain.Contract;
+using System.Security.Claims;
 
 namespace JWTAuthService.Domain.UseCase;
 
@@ -11,8 +12,8 @@ public class RefreshAccessToken : IRefreshAccessToken
         _generateToken = generateToken;
     }
 
-    public string Refresh(string email, string accessKey)
+    public string Refresh(List<Claim> claims, string accessKey)
     {
-        return _generateToken.GenerateAccessToken(email, accessKey);
+        return _generateToken.GenerateAccessToken(claims, accessKey);
     }
 }

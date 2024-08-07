@@ -70,9 +70,9 @@ public class JWTAuthHandler : AuthenticationHandler<AuthenticationSchemeOptions>
         if (!_refreshResult.Succeeded)
             return AuthenticateResult.Fail("Token was expired");
 
-        var _email = GetEmailFromClaims(jwtRefreshToken, _tokenHandler, _refreshKey);
+        var _claims = GetClaimsFromToken(jwtRefreshToken, _tokenHandler, _refreshKey);
 
-        var _newAccessToken = _refreshAccessToken.Refresh(_email, _configuration[ACCESS_KEY]);
+        var _newAccessToken = _refreshAccessToken.Refresh(_claims, _configuration[ACCESS_KEY]);
 
         if (string.IsNullOrWhiteSpace(_newAccessToken))
             return AuthenticateResult.Fail("Failed to refresh token");
@@ -121,7 +121,7 @@ public class JWTAuthHandler : AuthenticationHandler<AuthenticationSchemeOptions>
         }
     }
 
-    private string GetEmailFromClaims(string jwtToken, JwtSecurityTokenHandler tokenHandler, byte[] key)
+    private List<Claim> GetClaimsFromToken(string jwtToken, JwtSecurityTokenHandler tokenHandler, byte[] key)
     {
         try
         {
@@ -135,12 +135,11 @@ public class JWTAuthHandler : AuthenticationHandler<AuthenticationSchemeOptions>
                 RequireExpirationTime = true
             }, out SecurityToken _validatedToken);
             var _jwtSecurityToken = (JwtSecurityToken)_validatedToken;
-            var _email = _jwtSecurityToken.Claims.First(x => x.Type == "email").Value;
-            return _email;
+            return _jwtSecurityToken.Claims.ToList();
         }
         catch (Exception)
         {
-            return "";
+            return [];
         }
     }
 }
