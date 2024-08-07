@@ -102,14 +102,12 @@ public class JWTAuthHandler : AuthenticationHandler<AuthenticationSchemeOptions>
             }, out SecurityToken validatedToken);
 
             var jwtSecurityToken = (JwtSecurityToken)validatedToken;
-            var email = jwtSecurityToken.Claims.First(x => x.Type == "email");
 
-            var claims = new[]
-            {
-                new Claim(ClaimTypes.Email, email.Value)
-            };
 
-            var identity = new ClaimsIdentity(claims, Scheme.Name);
+            List<Claim> _claims = [];
+            foreach (var claim in jwtSecurityToken.Claims) { _claims.Add(claim); }
+
+            var identity = new ClaimsIdentity(_claims, Scheme.Name);
             var principal = new ClaimsPrincipal(identity);
             var ticket = new AuthenticationTicket(principal, Scheme.Name);
 
