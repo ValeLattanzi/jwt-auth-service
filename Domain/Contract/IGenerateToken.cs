@@ -1,7 +1,9 @@
-﻿namespace JWTAuthService.Domain.Contract;
+﻿using System.Security.Claims;
+
+namespace JWTAuthService.Domain.Contract;
 
 public interface IGenerateToken
 {
-    string GenerateAccessToken(string email, string accessKey);
-    string GenerateRefreshToken(string email, string refreshKey);
+    string GenerateAccessToken(List<Claim> claims, string accessKey);
+    string GenerateRefreshToken(List<Claim> claims, string refreshKey);
 }

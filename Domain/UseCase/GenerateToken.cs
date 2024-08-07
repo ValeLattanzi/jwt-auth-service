@@ -12,7 +12,7 @@ public class GenerateToken : IGenerateToken
     {
     }
 
-    public string GenerateAccessToken(string email, string accessKey)
+    public string GenerateAccessToken(List<Claim> claims, string accessKey)
     {        // 1.- Generar el AccessToken
         var _tokenHandler = new JwtSecurityTokenHandler();
         // 2.- Obtiene la clave para cifrar el token
@@ -20,10 +20,7 @@ public class GenerateToken : IGenerateToken
         // 3.- Define la configuracion
         var _tokenDescriptor = new SecurityTokenDescriptor
         {
-            Subject = new ClaimsIdentity(
-            [
-                new Claim(ClaimTypes.Email, email)
-            ]),
+            Subject = new ClaimsIdentity(claims),
             Expires = DateTime.UtcNow.AddMinutes(5),
             SigningCredentials = new SigningCredentials(new SymmetricSecurityKey(_key), SecurityAlgorithms.HmacSha256Signature)
         };
@@ -33,16 +30,13 @@ public class GenerateToken : IGenerateToken
         return _accessToken;
     }
 
-    public string GenerateRefreshToken(string email, string refreshKey)
+    public string GenerateRefreshToken(List<Claim> claims, string refreshKey)
     {
         var _tokenHandler = new JwtSecurityTokenHandler();
         var _refreshKey = Encoding.ASCII.GetBytes(refreshKey);
         var _tokenDescriptor = new SecurityTokenDescriptor
         {
-            Subject = new ClaimsIdentity(
-            [
-                new Claim(ClaimTypes.Email, email)
-            ]),
+            Subject = new ClaimsIdentity(claims),
             Expires = DateTime.UtcNow.AddMinutes(20),
             SigningCredentials = new SigningCredentials(new SymmetricSecurityKey(_refreshKey), SecurityAlgorithms.HmacSha256Signature)
         };
