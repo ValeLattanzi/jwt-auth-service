@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "WYWLn3QJ1vY=",
+  "dgSpecHash": "t5esiam3qnA=",
   "success": true,
-  "projectFilePath": "C:\\SharedLibs\\JWTAuthService\\JWTAuthService.csproj",
+  "projectFilePath": "C:\\Users\\Valentino\\Documents\\Programacion\\JWTAuthService\\JWTAuthService\\JWTAuthService.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Valentino\\.nuget\\packages\\microsoft.aspnetcore.authentication\\2.2.0\\microsoft.aspnetcore.authentication.2.2.0.nupkg.sha512",
     "C:\\Users\\Valentino\\.nuget\\packages\\microsoft.aspnetcore.authentication.abstractions\\2.2.0\\microsoft.aspnetcore.authentication.abstractions.2.2.0.nupkg.sha512",

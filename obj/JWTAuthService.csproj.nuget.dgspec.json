@@ -1,18 +1,21 @@
 {
   "format": 1,
   "restore": {
-    "C:\\SharedLibs\\JWTAuthService\\JWTAuthService.csproj": {}
+    "C:\\Users\\Valentino\\Documents\\Programacion\\JWTAuthService\\JWTAuthService\\JWTAuthService.csproj": {}
   },
   "projects": {
-    "C:\\SharedLibs\\JWTAuthService\\JWTAuthService.csproj": {
+    "C:\\Users\\Valentino\\Documents\\Programacion\\JWTAuthService\\JWTAuthService\\JWTAuthService.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\SharedLibs\\JWTAuthService\\JWTAuthService.csproj",
+        "projectUniqueName": "C:\\Users\\Valentino\\Documents\\Programacion\\JWTAuthService\\JWTAuthService\\JWTAuthService.csproj",
         "projectName": "JWTAuthService",
-        "projectPath": "C:\\SharedLibs\\JWTAuthService\\JWTAuthService.csproj",
+        "projectPath": "C:\\Users\\Valentino\\Documents\\Programacion\\JWTAuthService\\JWTAuthService\\JWTAuthService.csproj",
         "packagesPath": "C:\\Users\\Valentino\\.nuget\\packages\\",
-        "outputPath": "C:\\SharedLibs\\JWTAuthService\\obj\\",
+        "outputPath": "C:\\Users\\Valentino\\Documents\\Programacion\\JWTAuthService\\JWTAuthService\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
         "configFilePaths": [
           "C:\\Users\\Valentino\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
@@ -21,10 +24,9 @@
           "net8.0"
         ],
         "sources": {
-          "C:\\MaxFlex\\VictoriaMaxFlexNet\\SistemaALL\\Packages": {},
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "C:\\Program Files\\dotnet\\library-packs": {},
-          "https://www.nuget.org/api/v2/": {}
+          "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net8.0": {
@@ -80,7 +82,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.303/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.302/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
