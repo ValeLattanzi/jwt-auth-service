@@ -32,10 +32,15 @@ public class ValidateToken : IValidateToken
                 RequireExpirationTime = true
             }, out SecurityToken _validatedToken);
 
-            return _validatedToken.ValidTo < DateTime.UtcNow;
+            return false;
         }
-        catch (Exception)
+        catch (SecurityTokenExpiredException)
         {
+            return true;
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine(ex.Message);
             return true;
         }
     }
