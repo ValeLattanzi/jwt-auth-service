@@ -40,8 +40,8 @@ public class JWTAuthHandler : AuthenticationHandler<AuthenticationSchemeOptions>
         if (!Request.Headers.ContainsKey(AUTH_HEADER) || !Request.Headers.ContainsKey(REFRESH_HEADER))
             return AuthenticateResult.Fail("Unauthorized");
 
-        string _accessToken = Request.Headers[AUTH_HEADER];
-        string _refreshToken = Request.Headers[REFRESH_HEADER];
+        string? _accessToken = Request.Headers[AUTH_HEADER];
+        string? _refreshToken = Request.Headers[REFRESH_HEADER];
 
         if (string.IsNullOrWhiteSpace(_accessToken) ||
             !_accessToken.StartsWith(AUTH_SCHEME) ||
@@ -54,7 +54,7 @@ public class JWTAuthHandler : AuthenticationHandler<AuthenticationSchemeOptions>
 
         var _tokenHandler = new JwtSecurityTokenHandler();
         // Toma la clave para cifrar el access token
-        var _accessKey = Encoding.ASCII.GetBytes(_configuration[ACCESS_KEY]);
+        var _accessKey = Encoding.ASCII.GetBytes(_configuration[ACCESS_KEY]!);
 
         // Valida el access token
         var _accessResult = ValidateToken(jwtAccessToken, _tokenHandler, _accessKey);
@@ -63,7 +63,7 @@ public class JWTAuthHandler : AuthenticationHandler<AuthenticationSchemeOptions>
             return _accessResult;
 
         // Toma la clave para cifrar el refresh token
-        var _refreshKey = Encoding.ASCII.GetBytes(_configuration[REFRESH_KEY]);
+        var _refreshKey = Encoding.ASCII.GetBytes(_configuration[REFRESH_KEY]!);
         var _refreshResult = ValidateToken(jwtRefreshToken, _tokenHandler, _refreshKey);
 
         // Si el refresh token expira
@@ -72,7 +72,7 @@ public class JWTAuthHandler : AuthenticationHandler<AuthenticationSchemeOptions>
 
         var _claims = GetClaimsFromToken(jwtRefreshToken, _tokenHandler, _refreshKey);
 
-        var _newAccessToken = _refreshAccessToken.Refresh(_claims, _configuration[ACCESS_KEY]);
+        var _newAccessToken = _refreshAccessToken.Refresh(_claims, _configuration[ACCESS_KEY]!);
 
         if (string.IsNullOrWhiteSpace(_newAccessToken))
             return AuthenticateResult.Fail("Failed to refresh token");
