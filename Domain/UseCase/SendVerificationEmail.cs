@@ -15,7 +15,10 @@ public class SendVerificationEmail : ISendVerificationEmail {
 		_sendEmail = sendEmail;
 	}
 
-	public async Task<Result> SendEmail(User user, SmptConfiguration smptConfiguration, string appName, Uri frontEndUrl,
+	public async Task<Result> SendEmail(User user,
+		SmptConfiguration smptConfiguration,
+		string appName,
+		Uri frontEndUrl,
 		Uri appLogoUrl) {
 		// 1. Create token
 		var token = _generateToken.GenerateVerificationToken(user.Id, user.Email);

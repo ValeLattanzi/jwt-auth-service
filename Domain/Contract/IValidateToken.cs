@@ -1,6 +1,9 @@
-﻿namespace JWTAuthService.Domain.Contract;
+﻿using System.Security.Claims;
+using result_pattern;
 
-public interface IValidateToken
-{
-    bool IsExpired(string token, string key);
+namespace JWTAuthService.Domain.Contract;
+
+public interface IValidateToken {
+	bool IsExpired(string token, string key);
+	Result ValidateClaims(string token, List<Claim> claims);
 }
