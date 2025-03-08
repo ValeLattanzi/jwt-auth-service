@@ -8,4 +8,8 @@ public static class EmailErrors
 	{
 		return new Error("Email.FailOnSend", "An error occurred while sending email", ErrorType.BadRequest);
 	}
+
+	public static Error SmptConfigurationNotProvided => new("Email.SmptConfigurationNotProvided", "SmptConfiguration is not provided", ErrorType.BadRequest);
+
+	public static Error SendEmailRequestNotProvided => new("Email.SendEmailRequestNotProvided", "SendEmailRequest is not provided", ErrorType.BadRequest);
 }
