@@ -1,0 +1,16 @@
+/home/valentino/Documentos/Proyectos/shared-libs/jwt-auth-service/bin/Debug/net9.0/JWTAuthService.deps.json
+/home/valentino/Documentos/Proyectos/shared-libs/jwt-auth-service/bin/Debug/net9.0/JWTAuthService.dll
+/home/valentino/Documentos/Proyectos/shared-libs/jwt-auth-service/bin/Debug/net9.0/JWTAuthService.pdb
+/home/valentino/Documentos/Proyectos/shared-libs/jwt-auth-service/bin/Debug/net9.0/result-pattern.dll
+/home/valentino/Documentos/Proyectos/shared-libs/jwt-auth-service/bin/Debug/net9.0/result-pattern.pdb
+/home/valentino/Documentos/Proyectos/shared-libs/jwt-auth-service/obj/Debug/net9.0/JWTAuthService.csproj.AssemblyReference.cache
+/home/valentino/Documentos/Proyectos/shared-libs/jwt-auth-service/obj/Debug/net9.0/JWTAuthService.GeneratedMSBuildEditorConfig.editorconfig
+/home/valentino/Documentos/Proyectos/shared-libs/jwt-auth-service/obj/Debug/net9.0/JWTAuthService.AssemblyInfoInputs.cache
+/home/valentino/Documentos/Proyectos/shared-libs/jwt-auth-service/obj/Debug/net9.0/JWTAuthService.AssemblyInfo.cs
+/home/valentino/Documentos/Proyectos/shared-libs/jwt-auth-service/obj/Debug/net9.0/JWTAuthService.csproj.CoreCompileInputs.cache
+/home/valentino/Documentos/Proyectos/shared-libs/jwt-auth-service/obj/Debug/net9.0/JWTAuthService.sourcelink.json
+/home/valentino/Documentos/Proyectos/shared-libs/jwt-auth-service/obj/Debug/net9.0/JWTAuthS.B2275A1D.Up2Date
+/home/valentino/Documentos/Proyectos/shared-libs/jwt-auth-service/obj/Debug/net9.0/JWTAuthService.dll
+/home/valentino/Documentos/Proyectos/shared-libs/jwt-auth-service/obj/Debug/net9.0/refint/JWTAuthService.dll
+/home/valentino/Documentos/Proyectos/shared-libs/jwt-auth-service/obj/Debug/net9.0/JWTAuthService.pdb
+/home/valentino/Documentos/Proyectos/shared-libs/jwt-auth-service/obj/Debug/net9.0/ref/JWTAuthService.dll

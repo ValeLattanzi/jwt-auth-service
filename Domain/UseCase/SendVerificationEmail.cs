@@ -6,22 +6,14 @@ using result_pattern;
 
 namespace JWTAuthService.Domain.UseCase;
 
-public class SendVerificationEmail : ISendVerificationEmail {
-	private readonly IGenerateToken _generateToken;
-	private readonly ISendEmail _sendEmail;
-
-	public SendVerificationEmail(IGenerateToken generateToken, ISendEmail sendEmail) {
-		_generateToken = generateToken;
-		_sendEmail = sendEmail;
-	}
-
-	public async Task<Result> SendEmail(User user,
+public class SendVerificationEmail(IGenerateToken generateToken, ISendEmail email) : ISendVerificationEmail {
+	public async Task<Result> sendEmail(User user,
 		SmptConfiguration smptConfiguration,
 		string appName,
 		Uri frontEndUrl,
 		Uri appLogoUrl) {
 		// 1. Create token
-		var token = _generateToken.GenerateVerificationToken(user.Id, user.Email);
+		var token = generateToken.generateVerificationToken(user.Id, user.Email);
 
 		// 2. Send email
 		var emailBody = $@"
@@ -68,7 +60,7 @@ public class SendVerificationEmail : ISendVerificationEmail {
 </div>
     ";
 		var sendEmailRequest = new SendEmailRequest(user.Email, $"{appName} - Email Verification", emailBody);
-		await _sendEmail.Notificate(smptConfiguration, sendEmailRequest, appName);
+		await email.Notificate(smptConfiguration, sendEmailRequest, appName);
 		return Result.success(true);
 	}
 }
