@@ -8,16 +8,16 @@
     </PropertyGroup>
 
     <ItemGroup>
-        <PackageReference Include="MailKit" Version="4.10.0"/>
-        <PackageReference Include="Microsoft.AspNetCore.Authentication" Version="2.3.0"/>
-        <PackageReference Include="Microsoft.AspNetCore.Mvc.Core" Version="2.3.0"/>
-        <PackageReference Include="Microsoft.Extensions.Configuration.Abstractions" Version="9.0.2"/>
-        <PackageReference Include="MimeKit" Version="4.10.0"/>
-        <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="8.6.0"/>
+        <PackageReference Include="MailKit" Version="4.10.0" />
+        <PackageReference Include="Microsoft.AspNetCore.Authentication" Version="2.3.0" />
+        <PackageReference Include="Microsoft.AspNetCore.Mvc.Core" Version="2.3.0" />
+        <PackageReference Include="Microsoft.Extensions.Configuration.Abstractions" Version="9.0.2" />
+        <PackageReference Include="MimeKit" Version="4.10.0" />
+        <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="8.6.0" />
     </ItemGroup>
 
     <ItemGroup>
-        <ProjectReference Include="..\result-pattern\result-pattern.csproj"/>
+        <ProjectReference Include="..\result-pattern\result-pattern.csproj" />
     </ItemGroup>
 
 </Project>

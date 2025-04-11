@@ -1,4 +1,4 @@
-namespace JWTAuthService.Domain.UseCase;
+namespace JWTAuthService.Domain.Contract;
 
 using JWTAuthService.Infrastructure.Data;
 

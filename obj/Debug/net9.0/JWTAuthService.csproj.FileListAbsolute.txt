@@ -1,0 +1,16 @@
+C:\SharedLibs\JWTAuthService\bin\Debug\net9.0\JWTAuthService.deps.json
+C:\SharedLibs\JWTAuthService\bin\Debug\net9.0\JWTAuthService.dll
+C:\SharedLibs\JWTAuthService\bin\Debug\net9.0\JWTAuthService.pdb
+C:\SharedLibs\JWTAuthService\bin\Debug\net9.0\result-pattern.dll
+C:\SharedLibs\JWTAuthService\bin\Debug\net9.0\result-pattern.pdb
+C:\SharedLibs\JWTAuthService\obj\Debug\net9.0\JWTAuthService.csproj.AssemblyReference.cache
+C:\SharedLibs\JWTAuthService\obj\Debug\net9.0\JWTAuthService.GeneratedMSBuildEditorConfig.editorconfig
+C:\SharedLibs\JWTAuthService\obj\Debug\net9.0\JWTAuthService.AssemblyInfoInputs.cache
+C:\SharedLibs\JWTAuthService\obj\Debug\net9.0\JWTAuthService.AssemblyInfo.cs
+C:\SharedLibs\JWTAuthService\obj\Debug\net9.0\JWTAuthService.csproj.CoreCompileInputs.cache
+C:\SharedLibs\JWTAuthService\obj\Debug\net9.0\JWTAuthService.sourcelink.json
+C:\SharedLibs\JWTAuthService\obj\Debug\net9.0\JWTAuthS.B2275A1D.Up2Date
+C:\SharedLibs\JWTAuthService\obj\Debug\net9.0\JWTAuthService.dll
+C:\SharedLibs\JWTAuthService\obj\Debug\net9.0\refint\JWTAuthService.dll
+C:\SharedLibs\JWTAuthService\obj\Debug\net9.0\JWTAuthService.pdb
+C:\SharedLibs\JWTAuthService\obj\Debug\net9.0\ref\JWTAuthService.dll

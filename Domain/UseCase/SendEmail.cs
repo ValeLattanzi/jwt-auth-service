@@ -1,5 +1,6 @@
 namespace JWTAuthService.Domain.UseCase;
 
+using JWTAuthService.Domain.Contract;
 using JWTAuthService.Infrastructure.Data;
 using JWTAuthService.Infrastructure.Service;
 
